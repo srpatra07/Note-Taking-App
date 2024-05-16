@@ -6,7 +6,7 @@
                <img src="assets/site-logo.png" alt="Logo" width="30px" height="30px" alt="">
            </a>
      	</div>
-			<a class="navbar-brand" href="home.jsp"><b>Mo Management</b></a>
+			<a class="navbar-brand" href="home.jsp"><b>Mo Notes</b></a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"

@@ -5,7 +5,7 @@
                <img src="assets/site-logo.png" alt="Logo" width="100px" height="100px" alt="">
            </a>
      	</div>
-			<a class="navbar-brand" href="index.jsp"><i class="fa-solid fa-list-check"></i><b style="font-size: 45px;">Mo Management</b></a>
+			<a class="navbar-brand" href="index.jsp"><i class="fa-solid fa-list-check"></i><b style="font-size: 45px;">Mo Notes</b></a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
