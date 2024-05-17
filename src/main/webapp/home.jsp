@@ -27,18 +27,29 @@
 		<%=sessionUser.getName().toUpperCase()%>
 		to Home Page
 	</h1>
-	<div class="container-fluid p-3">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card paint-card">
-					<div class="card-body">
-					</div>
-				</div>
-			</div>
+	
+	<% String msg = (String)session.getAttribute("success");
+						%>
+						
+						<% 
+							if(msg!=null)
+							%>
+								<p class="text-center text-success fs-4"><%= msg %></p>
+						<%
+						session.removeAttribute("success");
+						%>
+	
+	<div class="container border">
+		<div>
+			<a href="add_notes.jsp" class="btn bg-primary text-white">Add Notes</a>
 		</div>
 	</div>
-	<%
-	}
-	%>
+	
+	<div class="card">
+		<div>
+			
+		</div>
+	</div>
+	
 </body>
 </html>
