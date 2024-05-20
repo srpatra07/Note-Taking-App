@@ -1,4 +1,4 @@
-package com.note.dao;
+  package com.note.dao;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import com.note.dto.Notes;
+import com.note.dto.User;
 
 public class NotesDao {
 
@@ -45,10 +46,24 @@ public class NotesDao {
 	
 	public void deleteNotesById(int id)
 	{
-		Notes note = em.find(Notes.class, id);
+		Notes notes = em.find(Notes.class, id);
+		
+		User user = notes.getUser();
+		
+		List<Notes> list = user.getNotes();
+		
+		for(Notes n : list)
+		{
+			if(n.getId() == id)
+			{
+				list.remove(n);
+				break;
+			}
+		}
 		
 		et.begin();
-		em.remove(note);
+		em.merge(user);
+		em.remove(notes);
 		et.commit();
 	}
 }

@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Home Page</title>
 <%@ include file="components/bootstrapCss.jsp" %>
 <style type="text/css">
 .paint-card {
@@ -24,7 +24,7 @@
 	<body>
 
 <%@ include file="components/homeBar.jsp" %>
-<h3 style="text-align: center; color:red"> Welcome to Home page</h3>
+<h3 style="text-align: center; color:red; font-size : 50px"> <b>Welcome to Home page</b></h3>
 
   <% String successmsg=(String)session.getAttribute("success"); 
     if(successmsg!=null){%>
@@ -42,7 +42,7 @@
 	%>
 	<% 
 	    int id=user.getId();
-	    UserDao dao=new UserDao();
+		UserDao dao = new UserDao();
 	    User u=dao.fetchUserById(id);
 	    List<Notes> list= u.getNotes();
 	%>
@@ -61,9 +61,9 @@
 	       <div class="d-flex flex-wrap justly-content-evenly">
 	       <div>
 	         <h2 class="text-success card-title"><%=n.getTitle() %></h2>
-	         <a href="view_note.jsp?id=<%=n.getId()%>" class="btn btn-sm btn-info">view</a>
-	         <a href="view_note.jsp?id=<%=n.getId()%>" class="btn btn-sm btn-info">update</a>
-	         <a href="delete?id=<%=n.getId()%>" class="btn btn-sm btn-info btn-danger">delete</a>
+	         <a href="view_note.jsp?id=<%=n.getId()%>" class="btn btn-sm btn-info btn-success text-light">View</a>
+	         <a href="view_note.jsp?id=<%=n.getId()%>" class="btn btn-sm btn-info btn-warning text-light">Update</a>
+	         <a href="delete_note?id=<%=n.getId()%>" class="btn btn-sm btn-info btn-danger">Delete</a>
 	         </div>
 	       </div>
 	       
