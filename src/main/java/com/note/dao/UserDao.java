@@ -8,6 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import com.note.dto.Notes;
 import com.note.dto.User;
 
 public class UserDao {

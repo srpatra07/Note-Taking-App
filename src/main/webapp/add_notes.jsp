@@ -12,6 +12,13 @@
 }
 </style>
 </head>
+
+<% 
+	User user = (User)session.getAttribute("userObj");
+	if(user!= null)
+	{
+%>
+
 <body>
 
 <%@ include file="components/homeBar.jsp" %>
@@ -42,4 +49,13 @@
 	</div>
 
 </body>
+
+<% 
+	}
+	else
+	{
+		response.sendRedirect("login.jsp");
+	}
+%>
+
 </html>

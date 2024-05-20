@@ -2,9 +2,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<div class="container-fluid">
 		<div style="border-radius: 5px;">
-           <a class="navbar-brand" href="#">
-               <img src="assets/site-logo.png" alt="Logo" width="30px" height="30px" alt="">
-           </a>
      	</div>
 			<a class="navbar-brand" href="home.jsp"><b>Mo Notes</b></a>
 			<button class="navbar-toggler" type="button"

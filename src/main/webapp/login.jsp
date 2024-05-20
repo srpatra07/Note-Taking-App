@@ -22,10 +22,8 @@
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="fs-4 text-center">User Login</p>
-						<form action="login" method="post">
-							<%
+						<%
 							String msg = (String) session.getAttribute("failure");
-							if (msg != null) {
 							%>
 
 							<%
@@ -38,8 +36,9 @@
 
 							<%
 							session.removeAttribute("fail");
-							}
+							
 							%>
+						<form action="login" method="post">
 							<div class="mb-3">
 								<label class="form-label">Email Address</label> <input
 									name="email" type="email" class="form-control" required>

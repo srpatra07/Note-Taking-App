@@ -33,4 +33,22 @@ public class NotesDao {
 		
 		return notes;
 	}
+	
+	public void updateNotesById(int id)
+	{
+		Notes note = em.find(Notes.class, id);
+		
+		et.begin();
+		em.merge(note);
+		et.commit();
+	}
+	
+	public void deleteNotesById(int id)
+	{
+		Notes note = em.find(Notes.class, id);
+		
+		et.begin();
+		em.remove(note);
+		et.commit();
+	}
 }
